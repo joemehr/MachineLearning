@@ -1,9 +1,3 @@
-+ SUPERVISED Learning = teach the computer how to learn
-+ "right answers" are given for each example in data
-+ classification probelem = predict discrete valued output
-+ regression = predict continuous/real-valued valued output 
-+ support vector machine allows an infinite number of features to be given as the "right answer"
-
 + Learning Regression in 1 variable with training set
     - m = number of training examples
     - x's = "input" variable/feature
