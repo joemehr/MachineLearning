@@ -17,7 +17,7 @@ Definition of Machine Learning by Tom Mitchell
 	+ UNSUPERVISED Learning = let the computer learn by itself
     + no "right answers" are given for each example in data
     + clustoring of data
-    + ex. clocktail party algorithm [W,s,v] = svd((repmat(sum(x.*x,1),size(x,1),1).*x)*x');
+    + example = clocktail party algorithm [W,s,v] = svd((repmat(sum(x.*x,1),size(x,1),1).*x)*x');
 
 - TODO: Reinforcement Learning
 - TODO: Recommender Systems
