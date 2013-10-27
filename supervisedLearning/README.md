@@ -11,3 +11,4 @@ supervisedLearning
     - WHOLE POINT: Find theta_0 & theta_1 so that h(x) is close to y for our training examples (x,y)
     - mathamatically this means we need to minimize (1/2m)(Sum from i = 1 to m of (h(x^(i))-y^(i))^2 ) where (1/2m) makes math easilier and (h(x^(i)) = theta_0 + theta_1 * x^(i)
     - math notation = minimize over theta_0, theta_1 the cost function J(theta_0, theta_1) also called the squared error function
+    - WHOLE POINT explained using a picture: https://github.com/quinnliu/MachineLearning/blob/master/imagesForExplanation/CostFunctionExampleWithTheta_0AndTheta_1.jpg 
