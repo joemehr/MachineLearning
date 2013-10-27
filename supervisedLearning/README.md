@@ -12,3 +12,6 @@ supervisedLearning
     - mathamatically this means we need to minimize (1/2m)(Sum from i = 1 to m of (h(x^(i))-y^(i))^2 ) where (1/2m) makes math easilier and (h(x^(i)) = theta_0 + theta_1 * x^(i)
     - math notation = minimize over theta_0, theta_1 the cost function J(theta_0, theta_1) also called the squared error function
     - WHOLE POINT explained using a picture: https://github.com/quinnliu/MachineLearning/blob/master/imagesForExplanation/CostFunctionExampleWithTheta_0AndTheta_1.jpg 
+    - Now plugging in the minimal theta_0 and theta_1 our function h(x) = theta_0 + theta_1 * x will predict h(x) = y by giving it an input x.
+
+    - GRADIENT DESCENT = algorithm that lets us find a minimal theta_0 and theta_1
