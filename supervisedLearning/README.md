@@ -1,3 +1,6 @@
+supervisedLearning
+==================
+
 + Learning Regression in 1 variable with training set
     - m = number of training examples
     - x's = "input" variable/feature
