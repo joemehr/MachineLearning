@@ -16,6 +16,12 @@ supervisedLearning
     - But how do we find the minimal theta_0 and theta_1?! GRADIENT DESCENT = algorithm that lets us find a minimal theta_0 and theta_1. It can also be used to minimize any arbitrary function J.
     - <img src="http://latex.codecogs.com/gif.latex?1+sin(x)" border="0"/>
     - "Batch" Gradient Descent = each step of gradient descent uses all of the training examples.
-+ Linear Regression in 2 variables with training set
++ Linear Algebra Review
+    - matrix = rectangular array of numbers written between square brackets.
+    - dimension of a matrix = # of rows x # of columns
+    - vector = an n x 1 matrix where (n = # of rows)
+    - maxtrices are written with capital letters while vectors are written with lower case letters
+
++ Linear Regression in multiple variables with training set
 
 
