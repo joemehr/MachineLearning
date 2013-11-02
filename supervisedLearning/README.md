@@ -14,7 +14,6 @@ supervisedLearning
     - WHOLE POINT explained using a picture: https://github.com/quinnliu/MachineLearning/blob/master/imagesForExplanation/CostFunctionExampleWithTheta_0AndTheta_1.jpg 
     - Now plugging in the minimal theta_0 and theta_1 our function h(x) = theta_0 + theta_1 * x will predict h(x) = y by giving it an input x.
     - But how do we find the minimal theta_0 and theta_1?! GRADIENT DESCENT = algorithm that lets us find a minimal theta_0 and theta_1. It can also be used to minimize any arbitrary function J.
-    - <img src="http://latex.codecogs.com/gif.latex?1+sin(x)" border="0"/>
     - "Batch" Gradient Descent = each step of gradient descent uses all of the training examples.
 + Linear Algebra Review
     - matrix = rectangular array of numbers written between square brackets.
@@ -22,11 +21,11 @@ supervisedLearning
     - vector = an n x 1 matrix where (n = # of rows)
     - maxtrices are written with capital letters while vectors are written with lower case letters
     - matrix matrix multiplication:
-    A = [a b; c d; e f] which is a 3x2 matrix
-    B = [g h i j; k l m n] which is a 2x4 matrix
-    A * B = a 3x4 matrix
-    To multiply A with B the # of columns in A must = # of rows in B.
-    A * B = [ag+bk ah+bl ai+bm aj+bn; cg+dk ch+dl ci+dm cj+dn; eg+fk eh+fl ei+fm ej+fn]
+    A = [a b; c d; e f] which is a 3x2 matrix\n
+    B = [g h i j; k l m n] which is a 2x4 matrix\n
+    A * B = a 3x4 matrix\n
+    To multiply A with B the # of columns in A must = # of rows in B.\n
+    A * B = [ag+bk ah+bl ai+bm aj+bn; cg+dk ch+dl ci+dm cj+dn; eg+fk eh+fl ei+fm ej+fn]\n
     - maxtrix properties: 
     not commutative = matrix A x matrix B != B x A 
     is associative = A x (B x C) = (A x B) x C
@@ -35,5 +34,7 @@ supervisedLearning
     - Matrix transpose: The transpose of a given matrix A_mxn is B_nxm where B_ij = A_ji.
 
 + Linear Regression in multiple variables with training set
+    - Multiple features/variables
+    n = number of features
 
 
