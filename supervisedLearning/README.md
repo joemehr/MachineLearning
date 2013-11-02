@@ -21,11 +21,11 @@ supervisedLearning
     - vector = an n x 1 matrix where (n = # of rows)
     - maxtrices are written with capital letters while vectors are written with lower case letters
     - matrix matrix multiplication:
-    A = [a b; c d; e f] which is a 3x2 matrix\n
-    B = [g h i j; k l m n] which is a 2x4 matrix\n
-    A * B = a 3x4 matrix\n
-    To multiply A with B the # of columns in A must = # of rows in B.\n
-    A * B = [ag+bk ah+bl ai+bm aj+bn; cg+dk ch+dl ci+dm cj+dn; eg+fk eh+fl ei+fm ej+fn]\n
+        + A = [a b; c d; e f] which is a 3x2 matrix
+        + B = [g h i j; k l m n] which is a 2x4 matrix
+        + A * B = a 3x4 matrix
+        + To multiply A with B the # of columns in A must = # of rows in B.
+        + A * B = [ag+bk ah+bl ai+bm aj+bn; cg+dk ch+dl ci+dm cj+dn; eg+fk eh+fl ei+fm ej+fn]
     - maxtrix properties: 
     not commutative = matrix A x matrix B != B x A 
     is associative = A x (B x C) = (A x B) x C
