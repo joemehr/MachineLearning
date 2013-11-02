@@ -35,6 +35,9 @@ supervisedLearning
 
 + Linear Regression in multiple variables with training set
     - Multiple features/variables
-    n = number of features
+        + n = number of features
+        + x^(i) = input (features) of ith training example
+        + (x_j)^(i) = value of feature j in ith training example
+
 
 
