@@ -43,6 +43,15 @@ supervisedLearning
         + if x_0 = 1, then vector x = [x_0; x_1; ... x_n]
         + and vector theta = [theta_0; theta_1; ... theta_n]
         + COOL THING: we can rewrite h(x) = theta^T * x where T is transpose
+        + Remember that GRADIENT DESCENT = algorithm that lets us find a minimal theta(a n+1 dimentional vector)
+        + J(theta) = (1/2m)(Sum from i = 1 to m of (h(x^(i))-y^(i))^2 )
+    - Feature Scaling = technique for making gradient descent work better = make sure features are on a similar scale
+        + For example, if x_1 has a range of values from 0 - 2000 and x_2 has a range of values from 0 - 5
+        inverse both values so x_1 = 1/(x_1) and x_2 = 1/(x_2) making both features take on a range of values from
+        0 < x_i < 1. Your goal is to get every feature approximately in the range -1 < x_i < 1.
+    - Mean normalization = technique for making gradient descent work better = replace x_i with x_i - mu_i to make
+    features have approximately zero mean (Do NOT apply to x_0 = 1).
+        + 
 
 
 
