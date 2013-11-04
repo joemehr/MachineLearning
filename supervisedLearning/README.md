@@ -51,7 +51,8 @@ supervisedLearning
         0 < x_i < 1. Your goal is to get every feature approximately in the range -1 < x_i < 1.
     - Mean normalization = technique for making gradient descent work better = replace x_i with x_i - mu_i to make
     features have approximately zero mean (Do NOT apply to x_0 = 1).
-        + 
+        + new x_i = (x_i - mu_i)/s_i where mu_i is the average value of x_i in training set and s_i is the range of the training set of is the standard deviation of the training set.
+    
 
 
 
