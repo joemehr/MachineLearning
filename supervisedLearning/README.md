@@ -38,6 +38,12 @@ supervisedLearning
         + n = number of features
         + x^(i) = input (features) of ith training example
         + (x_j)^(i) = value of feature j in ith training example
+        + h(x) = theta_0 + theta_1 * x_1 + theta_2 * x_2 + ...
+        theta_n * x_n
+        + if x_0 = 1, then vector x = [x_0; x_1; ... x_n]
+        + and vector theta = [theta_0; theta_1; ... theta_n]
+        + COOL THING: we can rewrite h(x) = theta^T * x where T is transpose
+
 
 
 
