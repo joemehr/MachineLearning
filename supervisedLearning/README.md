@@ -52,6 +52,13 @@ supervisedLearning
     - Mean normalization = technique for making gradient descent work better = replace x_i with x_i - mu_i to make
     features have approximately zero mean (Do NOT apply to x_0 = 1).
         + new x_i = (x_i - mu_i)/s_i where mu_i is the average value of x_i in training set and s_i is the range of the training set of is the standard deviation of the training set.
+    - Picking the Learning Rate Problem:
+       + if alpha is too small, there will be a slow convergence. Solution = picker larger alpha.
+       + if alpha is too large, J(theta) may not decrease during each iteration of gradient decent and will not converge. Solution = picker smaller alpha.
+    - Polynomial Regressioin
+       + if your traning data is not lineary distributed you may consider making your h_theta(x) function quadratic or cubic. This can be done even if you only have one feature. For example:
+       + you currently have h_theta(x) = theta_0 + theta_1 * x_1 but your data isn't LINEAR
+       + so rewrite as h_theta(x) = theta_0 + theta_1 * x_1 + theta_2 * (x_1)^2 giving you are quadratic function
     
 
 
