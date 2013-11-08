@@ -1,5 +1,5 @@
-linearRegressionIn1Variable
-===========================
+Linear Regression In 1 Variable
+===============================
 
 + Linear Regression in 1 variable with training set
     - m = number of training examples

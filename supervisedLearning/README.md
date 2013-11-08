@@ -1,5 +1,5 @@
-supervisedLearning
-==================
+Supervised Learning
+===================
 
 + folder ```linearRegressionIn1Variable```
 + folder ```linearRegressionInMultipleVariables```

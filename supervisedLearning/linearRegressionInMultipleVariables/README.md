@@ -1,5 +1,5 @@
-linearRegressionInMultipleVariables
-===================================
+Linear Regression In Multiple Variables
+=======================================
 
 + Linear Regression in multiple variables with training set
     - Multiple features/variables
