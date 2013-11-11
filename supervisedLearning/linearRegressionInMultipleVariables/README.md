@@ -43,28 +43,12 @@ Linear Regression In Multiple Variables
     - When to use Normal Equation vs. Gradient Descent
        + m = # of training examples, n = # of features, alpha = learning rate in gradient descent
          
-         |When to use Normal Equation vs. Gradient Descent |Pros                            |                              Cons|
-         |:-----------------------------------------------:|:------------------------------:|:--------------------------------:|
-         |Gradient Descent                                 |works well even when n is large |need to choose alpha              |
-         |                                                 |                                |needs many iterations             |
-         |Normal Equation                                  |no need to choose alpha         |slow if n is very large because we
-                                                                                             need to compute (X^T * X)^-1 which 
-                                                                                             will take O(n^3) time. If n > 10^4
-                                                                                             then you should use gradient      
-                                                                                             descent instead                   |
-         |                                                 |don't need to iterate           |does not work for logistic 
-                                                                                             regression                        |
+         |When to use Normal vs. Gradient Descent|Pros                                   |Cons                                   |
+         |:-------------------------------------:|:-------------------------------------:|:-------------------------------------:|
+         |Gradient Descent                       |works well even when n is large        |need to choose alpha                   |
+         |                                       |                                       |needs many iterations                  |
+         |Normal Equation                        |no need to choose alpha                |slow if n is very large                |
+         |                                       |don't need to iterate                  |doesn't work for logistic regression   |
+
        + General Rule = <b>If # of features is > 10,000 use Normal Equation, otherwise use Gradient Descent</b>
-       + Gradient Descent
-           - Pros:
-              + works well even when n is large
-           - Cons:
-              + need to choose alpha
-              + needs many iterations
-       + Normal Equation
-           - Pros:
-              + no need to choose alpha
-              + don't need to iterate
-           - Cons:
-              + slow if n is very large because we need to compute (X^T * X)^-1 which will take O(n^3) time. If n > 10^4 then you should use gradient instead.
-              + does not work for logistic regression
+       + NOTE: the Normal equation is slow on mordern computers in 2013 when n > 10,000 because we need to compute (X^T * X)^-1 which will take O(n^3) time for inversing the matrix. If n > 10^4 then you should use gradient decent instead.
