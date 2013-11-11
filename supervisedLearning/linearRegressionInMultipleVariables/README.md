@@ -41,7 +41,19 @@ Linear Regression In Multiple Variables
        + This is the exact same that will be done for the cost function J(theta_0, theta_1, ..., theta_m) instead of J(theta)
        + where theta = (X^T * X)^-1 * X^T * y and can be coded as ```pinv(X' * X) * X' * y```
     - When to use Normal Equation vs. Gradient Descent
-       + m = # of training examples and n = # of features
+       + m = # of training examples, n = # of features, alpha = learning rate in gradient descent
+       + |When to use Normal Equation vs. Gradient Descent |Pros                            |                              Cons|
+         |:-----------------------------------------------:|:------------------------------:|:--------------------------------:|
+         |Gradient Descent                                 |works well even when n is large |need to choose alpha              |
+         |                                                 |                                |needs many iterations             |
+         |Normal Equation                                  |no need to choose alpha         |slow if n is very large because we
+                                                                                             need to compute (X^T * X)^-1 which 
+                                                                                             will take O(n^3) time. If n > 10^4
+                                                                                             then you should use gradient      
+                                                                                             descent instead                   |
+         |                                                 |don't need to iterate           |does not work for logistic 
+                                                                                             regression                        |
+       + General Rule = <b>If # of features is > 10,000 use Normal Equation, otherwise use Gradient Descent</b>
        + Gradient Descent
            - Pros:
               + works well even when n is large
