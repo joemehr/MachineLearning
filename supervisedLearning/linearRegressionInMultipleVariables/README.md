@@ -10,10 +10,11 @@ Linear Regression In Multiple Variables
         theta_n * x_n
         + if x_0 = 1, then vector x = [x_0; x_1; ... x_n]
         + and vector theta = [theta_0; theta_1; ... theta_n]
-        + COOL THING: we can rewrite h(x) = theta^T * x where T is transpose
+        + COOL THING: we can rewrite h(x) = X * theta
+        + NOTE: h(x) = theta^T * x where T is transpose and x is a vector of 1 training example
         + J(theta) = (1/2m)(Sum from i = 1 to m of (h(x^(i))-y^(i))^2 )
-        + <b>We want to find which theta gives us the smallest cost! By using gradient descent.</b>
-        + Remember that GRADIENT DESCENT = algorithm that lets us find a minimal theta.
+        + <b>We want to find which theta gives us the smallest cost J(theta)! By using gradient descent.</b>
+        + Remember that GRADIENT DESCENT = algorithm that lets us find the theta vector that gives us the minimal cost!!!
     - Feature Scaling = technique for making gradient descent work better = make sure features are on a similar scale
         + For example, if x_1 has a range of values from 0 - 2000 and x_2 has a range of values from 0 - 5
         inverse both values so x_1 = 1/(x_1) and x_2 = 1/(x_2) making both features take on a range of values from
