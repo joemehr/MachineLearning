@@ -42,7 +42,8 @@ Linear Regression In Multiple Variables
        + where theta = (X^T * X)^-1 * X^T * y and can be coded as ```pinv(X' * X) * X' * y```
     - When to use Normal Equation vs. Gradient Descent
        + m = # of training examples, n = # of features, alpha = learning rate in gradient descent
-       + |When to use Normal Equation vs. Gradient Descent |Pros                            |                              Cons|
+         
+         |When to use Normal Equation vs. Gradient Descent |Pros                            |                              Cons|
          |:-----------------------------------------------:|:------------------------------:|:--------------------------------:|
          |Gradient Descent                                 |works well even when n is large |need to choose alpha              |
          |                                                 |                                |needs many iterations             |
