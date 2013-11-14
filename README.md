@@ -7,19 +7,20 @@ Definition of Machine Learning by Tom Mitchell
 
 - folder ```imagesForExplanation``` = contains images used in other folder's README files for explanation
 
-- folder ```supervisedLearning```
-    + SUPERVISED Learning = teach the computer how to learn
+- folder ```supervisedLearning``` = teach the computer how to learn
     + "right answers" are given for each example in data
 	+ classification probelem = predict discrete valued output
 	+ regression = predict continuous/real-valued valued output 
 	+ support vector machine allows an infinite number of features to be given as the "right answer"
 
 
-- folder ```unsupervisedLearning```
-	+ UNSUPERVISED Learning = let the computer learn by itself
+- folder ```unsupervisedLearning``` = let the computer learn by itself
     + no "right answers" are given for each example in data
     + clustoring of data
     + example = clocktail party algorithm ```[W,s,v] = svd((repmat(sum(x.*x,1),size(x,1),1).*x)*x');```
 
 - ```TODO: Reinforcement Learning```
 - ```TODO: Recommender Systems```
+
+===================================================================
+Feel free to e-mail me at quinnliu@vt.edu for any questions. Enjoy!
