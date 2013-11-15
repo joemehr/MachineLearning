@@ -49,4 +49,16 @@ for i = 1:numberOfColumnsInX_norm,
 	X_norm(:, i) = X_norm(:, i) ./ sigma(:, i);
 end
 
+% vectorized implementation
+%mu = mean(X);
+
+% for each row in matrix X_norm subtract by row vector mu
+
+%muRepeatedToHaveSameNumberOfRowsAsX = 
+
+%X_norm = X_norm .- mu;
+
+%sigma = std(X);
+%X_norm = X_norm ./ sigma;
+
 end
