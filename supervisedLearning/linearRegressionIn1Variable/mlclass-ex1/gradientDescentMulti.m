@@ -17,15 +17,28 @@ for iter = 1:num_iters
     %       of the cost function (computeCostMulti) and gradient here.
     %
 
+    % we minimize the value of J(theta) by changing the values of the 
+    % vector theta NOT changing X or y
 
+    % alpha = learning rate as a single number
 
+    % hypothesis = mx1 column vector
+    % X = mxn column vector
+    % theta = nx1 column vector
+    hypothesis = X * theta;
 
+    % errors = mx1 column vector
+    % y = mx1 column vector
+    errors = hypothesis .- y;
 
+    % X_column1 = mx1 column vector
+    X_column1 = X(:, 1);
 
+    % X_column2 = mx1 column vector
+    X_column2 = X(:, 2);
 
-
-
-
+    theta(1, 1) = theta(1, 1) - (alpha * (1/m) * errors' * X_column1);
+    theta(2, 1) = theta(2, 1) - (alpha * (1/m) * errors' * X_column2);
 
     % ============================================================
 

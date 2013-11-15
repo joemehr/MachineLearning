@@ -13,9 +13,26 @@ J = 0;
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
+% hypothesis = mx1 column vector
+% X = mxn matrix
+% theta = nx1 column vector
+hypothesis = X * theta;
 
+% errors = mx1 column vector
+% y = mx1 column vector
+errors = hypothesis .- y;
 
+% square all elements individually within 
+% column vector errors
 
+% squareOfErrors = mx1 column vector
+squareOfErrors = (errors).^2;
+
+% sumOfSquareErrors = single number
+sumOfSquareErrors = sum(squareOfErrors);
+
+% J = single number
+J = 1/(2 * m) * sumOfSquareErrors;
 
 % =========================================================================
 
