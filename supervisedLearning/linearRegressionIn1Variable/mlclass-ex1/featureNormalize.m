@@ -35,42 +35,18 @@ sigma = zeros(1, size(X, 2));
 %              sigma = 1xn row vector sigma
 %              X_norm = mxn matrix which has been normalized 
 %                       with mu and sigma
-
-% ====================Works with input matrix X of size nx2====================
-% X(:, 1) = all values of x_1 (house sizes in the training set)
-% X(:, 2) = all values of x_2 (# of bedrooms in the training set)
-%meanOfHousePrices = mean(X(:, 1));
-%meanOfBedrooms = mean(X(:, 2));
-%mu(:, 1) = meanOfHousePrices;
-%mu(:, 2) = meanOfBedrooms;
-
-% subtract each feature within the data set with it's mean
-%X_norm(:, 1) = X_norm(:, 1) .- meanOfHousePrices;
-%X_norm(:, 2) = X_norm(:, 2) .- meanOfBedrooms;
-
-%standardDeviationOfHousePrices = std(X(:, 1));
-%standardDeviationOfBedrooms = std(X(:, 2));
-%sigma(:, 1) = standardDeviationOfHousePrices;
-%sigma(:, 2) = standardDeviationOfBedrooms;
-
-%X_norm(:, 1) = X_norm(:, 1) ./ standardDeviationOfHousePrices;
-%X_norm(:, 2) = X_norm(:, 2) ./ standardDeviationOfBedrooms;
-
-% ====================Works with input matrix X of any size====================
-numberOfColumnsInX = columns(X);
-for i = 1:numberOfColumnsInX,
+numberOfColumnsInX_norm = columns(X_norm);
+% works with input matrix X of any size
+for i = 1:numberOfColumnsInX_norm, 
 	meanOfCurrentFeatureInX = mean(X(:, i));
 	mu(:, i) = meanOfCurrentFeatureInX;
 
 	X_norm(:, i) = X_norm(:, i) .- mu(:, i);
-end
 
-for i = 1:numberOfColumnsInX,
 	standardDeviationOfCurrentFeatureInX = mean(X(:, i));
 	sigma(:, i) = meanOfCurrentFeatureInX;
 
 	X_norm(:, i) = X_norm(:, i) ./ sigma(:, i);
 end
-% =============================================================================
 
 end
