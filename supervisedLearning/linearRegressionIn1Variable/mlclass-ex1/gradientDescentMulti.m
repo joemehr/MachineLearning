@@ -31,18 +31,8 @@ for iter = 1:num_iters
     % y = mx1 column vector
     errors = hypothesis .- y;
 
-    %=================Only works for matrix X of size nx2==================
-    % X_column1 = mx1 column vector
-    %X_column1 = X(:, 1);
-
-    % X_column2 = mx1 column vector
-    %X_column2 = X(:, 2);
-
-    %theta(1, 1) = theta(1, 1) - (alpha * (1/m) * errors' * X_column1);
-    %theta(2, 1) = theta(2, 1) - (alpha * (1/m) * errors' * X_column2);
-    %======================================================================
-
     newDecrement = (alpha * (1/m) * errors' * X); 
+    
     theta = theta - newDecrement';
 
     % ============================================================
