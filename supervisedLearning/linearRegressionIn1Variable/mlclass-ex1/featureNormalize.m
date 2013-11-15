@@ -48,13 +48,13 @@ sigma = zeros(1, size(X, 2));
 %X_norm(:, 1) = X_norm(:, 1) .- meanOfHousePrices;
 %X_norm(:, 2) = X_norm(:, 2) .- meanOfBedrooms;
 
-standardDeviationOfHousePrices = std(X(:, 1));
-standardDeviationOfBedrooms = std(X(:, 2));
-sigma(:, 1) = standardDeviationOfHousePrices;
-sigma(:, 2) = standardDeviationOfBedrooms;
+%standardDeviationOfHousePrices = std(X(:, 1));
+%standardDeviationOfBedrooms = std(X(:, 2));
+%sigma(:, 1) = standardDeviationOfHousePrices;
+%sigma(:, 2) = standardDeviationOfBedrooms;
 
-X_norm(:, 1) = X_norm(:, 1) ./ standardDeviationOfHousePrices;
-X_norm(:, 2) = X_norm(:, 2) ./ standardDeviationOfBedrooms;
+%X_norm(:, 1) = X_norm(:, 1) ./ standardDeviationOfHousePrices;
+%X_norm(:, 2) = X_norm(:, 2) ./ standardDeviationOfBedrooms;
 
 % ====================Works with input matrix X of any size====================
 numberOfColumnsInX = columns(X);
