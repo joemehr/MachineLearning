@@ -43,8 +43,8 @@ for i = 1:numberOfColumnsInX_norm,
 
 	X_norm(:, i) = X_norm(:, i) .- mu(:, i);
 
-	standardDeviationOfCurrentFeatureInX = mean(X(:, i));
-	sigma(:, i) = meanOfCurrentFeatureInX;
+	standardDeviationOfCurrentFeatureInX = std(X(:, i));
+	sigma(:, i) = standardDeviationOfCurrentFeatureInX;
 
 	X_norm(:, i) = X_norm(:, i) ./ sigma(:, i);
 end
