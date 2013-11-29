@@ -9,14 +9,7 @@ J_history = zeros(numberOfIterations, 1);
 
 % numberOfIterations = # of times to run gradient descent algorithm
 for iter = 1:numberOfIterations
-
-    % ====================== YOUR CODE HERE ======================
-    % Instructions: Perform a single gradient step on the parameter vector
-    %               theta. 
-    %
-    % Hint: While debugging, it can be useful to print out the values
-    %       of the cost function (computeCost) and gradient here.
-    %
+    % Perform a single gradient step on the parameter vector theta. 
 
     % we minimize the value of J(theta) by changing the values of the 
     % vector theta NOT changing X or y
@@ -40,8 +33,6 @@ for iter = 1:numberOfIterations
 
     theta(1, 1) = theta(1, 1) - (alpha * (1/m) * errors' * X_column1);
     theta(2, 1) = theta(2, 1) - (alpha * (1/m) * errors' * X_column2);
-
-    % ============================================================
 
     % Save the cost J in every iteration    
     J_history(iter) = computeCost(X, y, theta);
