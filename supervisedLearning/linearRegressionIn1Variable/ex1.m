@@ -1,4 +1,4 @@
-%% Machine Learning Online Class - Exercise 1: Linear Regression
+% Linear Regression in 1 Variable
 
 %  Instructions
 %  ------------
