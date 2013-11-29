@@ -9,7 +9,7 @@ clear ; close all; clc
 %% ======================= Part 1: Plotting =======================
 fprintf('Plotting Data ...\n')
 data = load('inputTrainingSet.txt');
-X = data(:, 1); y = data(:, 2); 
+X = data(:, 1); y = data(:, 2);
 m = length(y); % number of training examples
 
 % Plot Data
