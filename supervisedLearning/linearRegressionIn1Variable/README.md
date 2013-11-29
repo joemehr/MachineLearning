@@ -1,5 +1,27 @@
-Linear Regression In 1 Variable
-===============================
+Predicting City Population Using Linear Regression
+==================================================
+What each file or folder is for:
+
++ run.m = the main program
+
+Build(How To Use This Code)
+===========================
+1. install Octave or Matlab 
+
+2. fork this repo and type ```git clone <HTTP link here>```
+in your command line
+
+3. navigate to the folder with the above files
+
+4. type ```run``` in Octave or Matlab command line
+
+5. You will see a printout of linear regression being applied to predict population size of new cities. Additionally there will be several graphs:
+   + Graph of data 
+   + Graph of cost function
+   + Graph of minimal theta values for hypothesis equation
+
+Linear Regression In 1 Variable Review
+======================================
 
 + Linear Regression in 1 variable with training set
     - m = number of training examples
