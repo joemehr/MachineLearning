@@ -9,7 +9,7 @@ clear ; close all; clc
 fprintf('Loading data ...\n');
 
 %% Load Data
-data = load('ex1data2.txt');
+data = load('inputTrainingSet.txt');
 X = data(:, 1:2);
 y = data(:, 3);
 m = length(y);
@@ -75,7 +75,7 @@ fprintf('Solving with normal equations...\n');
 % linear regression using the normal equations. 
 
 %% Load Data
-data = csvread('ex1data2.txt');
+data = csvread('inputTrainingSet.txt');
 X = data(:, 1:2);
 y = data(:, 3);
 m = length(y);
@@ -84,7 +84,7 @@ m = length(y);
 X = [ones(m, 1) X];
 
 % Calculate the parameters from the normal equation
-theta = normalEquation(X, y);
+theta = normalEquation(X, y); 
 
 % Display normal equation's result
 fprintf('Theta computed from the normal equations: \n');
