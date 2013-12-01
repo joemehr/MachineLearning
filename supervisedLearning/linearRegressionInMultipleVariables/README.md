@@ -1,5 +1,22 @@
-Linear Regression In Multiple Variables
-=======================================
+Predicting City Population Using Linear Regression
+==================================================
+What each file or folder is for:
+
++ run.m = the main program
+
+Build(How To Use This Code)
+===========================
+1. install Octave or Matlab 
+
+2. fork this repo and type ```git clone <HTTP link here>```
+in your command line
+
+3. navigate to the folder with the above files
+
+4. type ```run``` in Octave or Matlab command line
+
+Linear Regression In Multiple Variables Review
+==============================================
 
 + Linear Regression in multiple variables with training set
     - Multiple features/variables
