@@ -3,6 +3,7 @@ Supervised Learning
 
 + folder ```linearRegressionIn1Variable```
 + folder ```linearRegressionInMultipleVariables```
++ folder ```logisticRegression```
 
 Linear Algebra Review
 =====================
