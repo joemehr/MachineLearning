@@ -36,5 +36,10 @@ Logistic Regression is a popular algorithm used for Classifiction Problems
     - step 3) then we can plug the result of step 2 into our gradient descent algorithm for logistic regression, conjugate gradient, BFGS, or L-BGFS
     - NOTE: the methods conjugate gradient, BFGS, and L-BGFS require no need to manually pick alpha and are often faster then gradient descent. However they are significantly more complex and require weeks to truly understand.
 
+  + Example code session:
+    - ```
+      octave-3.2.4.eve:21> PS1('>> ')
+      ```
+
 
 - Multi-class Classification = output y can take on multiple values
