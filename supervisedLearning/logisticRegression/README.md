@@ -64,10 +64,6 @@ Logistic Regression is a popular algorithm used for Classifiction Problems
       // ...
       gradient(n + 1) = [code to compute partialDerivativeOfJ(theta)WithRespectToThetaN]
     ```
-  + Test latex on github markdown:
-    ```octave
-    h_{\theta}= \frac{1}{1 + e^{-z}}  
-    ```
 
 
 
