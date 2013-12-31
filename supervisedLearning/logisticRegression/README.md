@@ -54,8 +54,8 @@ Logistic Regression is a popular algorithm used for Classifiction Problems
       functionVal = 1.57777e-030
       exitFlag = 1
       ```
-  + Overview of costFunction implemented in Octave/Matlab:
-    ```matlab
+  + Overview of generic costFunction implemented in Octave/Matlab:
+    ```octave
     function [jValue, gradient] = costFunction(theta)
       jVal = [code to compute J(theta)];
 
@@ -64,6 +64,10 @@ Logistic Regression is a popular algorithm used for Classifiction Problems
       // ...
       gradient(n + 1) = [code to compute partialDerivativeOfJ(theta)WithRespectToThetaN]
     ```
+  + Test latex on github markdown:
+  ```latex
+  h_{\theta}= \frac{1}{1 + e^{-z}}  
+  ```
 
 
 
