@@ -37,9 +37,34 @@ Logistic Regression is a popular algorithm used for Classifiction Problems
     - NOTE: the methods conjugate gradient, BFGS, and L-BGFS require no need to manually pick alpha and are often faster then gradient descent. However they are significantly more complex and require weeks to truly understand.
 
   + Example code session:
-    - ```
-      octave-3.2.4.eve:21> PS1('>> ')
+    - First navigate into this folder locally with the Octave/Matlab command line tool. Then type:
       ```
+      octave-3.2.4.eve:21> PS1('>> ')
+      >>
+      >> options = optimset('GradObj', 'on', 'MaxIter', '100');
+      >> initialTheta = zeros(2, 1)
+      initialTheta = 
+         0
+         0
+      >> [optTheta, functionVal, exitFlag] = fminunc(@costFunction, initialTheta, options)
+      optTheta = 
+         5.0000
+         5.0000
+
+      functionVal = 1.57777e-030
+      exitFlag = 1
+      ```
+  + Overview of costFunction implemented in Octave/Matlab:
+    ```matlab
+    function [jValue, gradient] = costFunction(theta)
+      jVal = [code to compute J(theta)];
+
+      gradient(1) = [code to compute partialDerivativeOfJ(theta)WithRespectToTheta0]
+      gradient(2) = [code to compute partialDerivativeOfJ(theta)WithRespectToTheta1]
+      // ...
+      gradient(n + 1) = [code to compute partialDerivativeOfJ(theta)WithRespectToThetaN]
+    ```
+
 
 
 - Multi-class Classification = output y can take on multiple values
