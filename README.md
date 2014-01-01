@@ -13,22 +13,19 @@ don't have money for Matlab.
 
 2. Fork this repository and clone it locally! Navigate into specific folders (made them very specific) and look at the README.md file for that specific folder for which file(s) to run to see examples of what machine learning algorithms can do for you. Enjoy!
 
-- folder imagesForExplanation/ = contains images used in other folder's README.md files for explanation
+<h2>What each file/folder in this repository is for:</h2>
+  - imagesForExplanation = contains images used in other folder's README.md files for explanation
 
-- folder supervisedLearning/ = teach the computer how to learn
-    + "right answers" are given for each example in data
-	+ classification problem = predict discrete valued output
-	+ regression = predict continuous/real-valued valued output 
-	+ support vector machine allows an infinite number of features to be given as the "right answer"
+  - folder supervisedLearning = teach the computer how to learn
+    + [linearRegressionIn1Variable](./supervisedLearning/linearRegressionIn1Variable)
+    + [linearRegressionInMultipleVariables](./supervisedLearning/linearRegressionInMultipleVariables)
+    + [logisticRegression](./supervisedLearning/logisticRegression)
+    + [LinearAlgebraReview.md](./supervisedLearning/LinearAlgebraReview.md)
 
+  - folder unsupervisedLearning = let the computer learn by itself
 
-- folder unsupervisedLearning/ = let the computer learn by itself
-    + no "right answers" are given for each example in data
-    + clustoring of data
-    + example = clocktail party algorithm ```[W,s,v] = svd((repmat(sum(x.*x,1),size(x,1),1).*x)*x');```
-
-- TODO: ReinforcementLearning/
-- TODO: RecommenderSystems/
+  - TODO: ReinforcementLearning
+  - TODO: RecommenderSystems
 
 ===================================================================
 Feel free to e-mail me at quinnliu@vt.edu for any questions. Enjoy!
