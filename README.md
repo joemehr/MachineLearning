@@ -5,8 +5,7 @@ Definition of Machine Learning by Tom Mitchell
 
 *"A computer program is said to learn from experience E with respect to some task T and some performance measure P, if its performance on T, as measured by P, improves with experience E."*
 
-How to use this code
-====================
+<h2>How to use this code</h2>
 
 1. Install [Octave free here](https://db.tt/J97Im052) or [Matlab not free here](http://www.mathworks.com/products/matlab/). Note that Octave = Matlab without the nice graphical user interface. I use Octave so don't feel like you are missing anything if you 
 don't have money for Matlab.
