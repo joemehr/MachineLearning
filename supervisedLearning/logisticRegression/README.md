@@ -69,3 +69,11 @@ Logistic Regression is a popular algorithm used for Classifiction Problems
   class i to predict the probability that y = i. On a new input x, to make a prediction, pick the
   class i that maximizes (h^(i)_theta(x))
     - (h^(i))_theta(x) = P(y = i | x; theta) where i = 1, 2, 3, ...
+
+- Problem of overfitting for logistic & linear regression has high varience
+  + overfitting = if there are too many features, the learned hypothesis may fit the training
+  set very well, but fail to generalize to new examples due to the hypothesis curves that are generated
+  + Solving overfitting:
+    - 1) reduce the # of features to only the important ones 2) model selection algorithm
+    - 3) Regularization = keep all the features but reduce magnitude/values of parameters theta_j
+    - 4) works well when there are a lot of features, each which contributes a little bit to predicting output y
