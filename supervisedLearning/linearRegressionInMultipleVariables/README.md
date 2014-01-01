@@ -7,8 +7,7 @@ What each file or folder is for:
 <h2>How To Use This Code</h2>
 1. install Octave or Matlab 
 
-2. fork this repo and type ```git clone <HTTP link here>```
-in your command line
+2. fork this repo and clone it locally!
 
 3. navigate to the folder with the above files
 
