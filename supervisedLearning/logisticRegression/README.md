@@ -46,7 +46,7 @@ Logistic Regression is a popular algorithm used for Classifiction Problems
       initialTheta = 
          0
          0
-      >> [optTheta, functionVal, exitFlag] = fminunc(@costFunction, initialTheta, options)
+      >> [optTheta, functionVal, exitFlag] = fminunc(@costFunctionExample, initialTheta, options)
       optTheta = 
          5.0000
          5.0000
@@ -76,4 +76,9 @@ Logistic Regression is a popular algorithm used for Classifiction Problems
   + Solving overfitting:
     - 1) reduce the # of features to only the important ones 2) model selection algorithm
     - 3) Regularization = keep all the features but reduce magnitude/values of parameters theta_j
+        + have small values for parameters theta_0, theta_1, ... theta_n
+        + this creates a "simpler" hypothesis and thus is less prone to overfitting
+        + we shrink all theta parameters by adding an extra regularization term lambda * Sum of i = 1 to n of (theta_j)^2
+        + this gives us the new cost function J(theta) = (1/2m) Sum from i = 1 to m of [h_theta(x^(i)), y^(i)]^2 + lambda * Sum of i = 1 to n of (theta_j)^2
+        + lambda needs to be just right. If lambda is too large the cost function will be underfitted with a horizontal line, otherwise if lambda is too small the cost function will be overfitted.
     - 4) works well when there are a lot of features, each which contributes a little bit to predicting output y
