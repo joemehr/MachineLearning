@@ -5,28 +5,26 @@ clear ; close all; clc
 
 %% Load Data
 %  The first two columns contains the exam scores and the third column
-%  contains the label.
+%  contains the label
 
 data = load('ex2data1.txt');
-X = data(:, [1, 2]); y = data(:, 3);
+X = data(:, [1, 2]); % X is a #OfExamScores x 2 matrix
+y = data(:, 3);      % y is a #OfExamScores x 1 matrix
 
-%% ==================== Part 1: Plotting ====================
-%  We start the exercise by first plotting the data to understand the 
-%  the problem we are working with.
-
+%  It's always a good idea to first plot the problem to solve
 fprintf(['Plotting data with + indicating (y = 1) examples and o ' ...
          'indicating (y = 0) examples.\n']);
-
 plotData(X, y);
 
 % Put some labels 
 hold on;
 % Labels and Legend
+title('Acceptance of Previous Students Based on Scores on 2 Exams')
 xlabel('Exam 1 score')
 ylabel('Exam 2 score')
 
 % Specified in plot order
-legend('Admitted', 'Not admitted')
+legend('Admitted Students', 'Not admitted Students')
 hold off;
 
 fprintf('\nProgram paused. Press enter to continue.\n');

@@ -3,7 +3,7 @@ Using Logistic Regression For Prediction
 
 This specific folder contains an example of using logistic regression to predict
 whether a student gets admitted into a university or not. But understand that by 
-just giving a different ```inputTrainingSet.txt``` file you can easily use logistic
+just giving a different ```ex2data1.txt``` file you can easily use logistic
 regression to predict something you want!
 
 <h2>How to use this code:</h2>
