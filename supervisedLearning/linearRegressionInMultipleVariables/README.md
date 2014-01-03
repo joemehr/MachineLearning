@@ -1,5 +1,10 @@
-Predicting City Population Using Linear Regression
-==================================================
+Using Multi-Variable Linear Regression for Prediction
+=====================================================
+
+This specific folder contains an example of using multi-variable linear regression to predict
+future city populations. But understand that by just giving a different ```inputTrainingSet.txt``` 
+file you can easily use multi-variable linear regression to predict something you want!
+
 What each file or folder is for:
 
 + run.m = the main program

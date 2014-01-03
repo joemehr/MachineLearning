@@ -1,5 +1,10 @@
-Predicting City Population Using Linear Regression
-==================================================
+Using Linear Regression for Prediction
+======================================
+
+This specific folder contains an example of using linear regression to predict
+future city populations. But understand that by just giving a different ```input
+TrainingSet.txt``` file you can easily use linear regression to predict something you 
+want!
 
 <h2>How To Use This Code</h2>
 1. install Octave or Matlab 
