@@ -20,17 +20,7 @@ logistic regression is used to predict with a linear decision boundary.
 example of how regularized logistic regression is used to predict with a 
 circular decision boundary.
 
-
-<h2>What each file/folder in this repository is for</h2>
-- mapFeature.m = function to generate polynomial features
-- plotDecisionBoundary.m = function to plot classifier's decision boundary
-- plotData.m = function to plot 2D classification data
-- sigmoid.m
-- costFunction.m = logistic regression cost function
-- predict.m = logistic regression prediction function
-- costFunctionReg.m = regularized logistic regression cost
-
-
+<h2>Logistic Regression Review</h2>
 Logistic Regression is a popular algorithm used for Classifiction Problems
 
 - Binary Classification = output y is a discrete value of 0 (negative class) or 1 (positive class)
