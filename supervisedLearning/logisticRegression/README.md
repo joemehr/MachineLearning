@@ -7,7 +7,19 @@ just giving a different ```ex2data1.txt``` file you can easily use logistic
 regression to predict something you want!
 
 <h2>How to use this code:</h2>
-1. 
+1. install Octave or Matlab
+
+2. fork this repo and clone it locally!
+
+3. navigate into the folder with the above files
+
+4. type ```runExample``` in Octave or Matlab command line to see an example of how
+logistic regression is used to predict with a linear decision boundary.
+
+5. type ```runRegularizedExample``` in Octave or Matlab command line to see an
+example of how regularized logistic regression is used to predict with a 
+circular decision boundary.
+
 
 <h2>What each file/folder in this repository is for</h2>
 - mapFeature.m = function to generate polynomial features
