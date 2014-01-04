@@ -56,15 +56,18 @@ fprintf('\nProgram paused. Press enter to continue.\n');
 pause;
 
 %% ============= Regularization and Accuracies =============
-%  Optional Exercise:
 %  In this part, you will get to try different values of lambda and 
 %  see how regularization affects the decision coundart
 %
 %  Try the following values of lambda (0, 1, 10, 100).
 %
-%  How does the decision boundary change when you vary lambda? How does
-%  the training set accuracy vary?
-%
+%  NOTE: With a small lambda, you should notice that the classifier
+%  gets almost every training example correct, but draws a very complicated
+%  boundar, thus overfitting the data. However, with a larger lambda
+%  you should see a plot that shows an simpler decision boundary
+%  which still separates the positives and negatives fairly well. However,
+%  make sure not to set lambda too high because then the decision 
+%  boundary will underfit the data.
 
 % Initialize fitting parameters
 initial_theta = zeros(size(X, 2), 1);
@@ -95,5 +98,3 @@ hold off;
 p = predict(theta, X);
 
 fprintf('Train Accuracy: %f\n', mean(double(p == y)) * 100);
-
-
