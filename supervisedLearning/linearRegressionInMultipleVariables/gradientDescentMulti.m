@@ -16,7 +16,7 @@ for iteration = 1:numberOfIterations
     % alpha = learning rate as a single number
 
     % hypothesis = mx1 column vector
-    % X = mxn column vector
+    % X = mxn matrix
     % theta = nx1 column vector
     hypothesis = X * theta;
 
