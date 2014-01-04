@@ -85,7 +85,7 @@ Logistic Regression is a popular algorithm used for Classifiction Problems
       gradient(n + 1) = [code to compute partialDerivativeOfJ(theta)WithRespectToThetaN]
     ```
 - Multi-class Classification = output y can take on multiple values
-  + One-vs-all (one-vs-rest) = train a logistic regressioin classifier (h^(i))_theta(x) for each
+  + One-vs-all (one-vs-rest) = train a logistic regressioin classifier (h_theta(x))^(i) for each
   class i to predict the probability that y = i. On a new input x, to make a prediction, pick the
   class i that maximizes (h^(i)_theta(x))
     - (h^(i))_theta(x) = P(y = i | x; theta) where i = 1, 2, 3, ...
