@@ -17,5 +17,5 @@ Neural Networks
     + Here is a neuron in your brain:  
     ![alt text](https://raw.github.com/quinnliu/MachineLearning/master/imagesForExplanation/LabeledNeuron.jpg)
 
-    + To represent this as an artificial neuron we have:
+    + To represent this as an artificial neuron we have:  
     ![alt text](https://raw.github.com/quinnliu/MachineLearning/master/imagesForExplanation/ArtificialNeuronModel.jpg)
