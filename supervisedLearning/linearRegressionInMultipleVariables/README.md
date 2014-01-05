@@ -31,9 +31,9 @@ file you can easily use multi-variable linear regression to predict something yo
         + <b>We want to find which theta gives us the smallest cost J(theta)! By using gradient descent.</b>
         + Remember that GRADIENT DESCENT = algorithm that lets us find the theta vector that gives us the minimal cost!!!
     - Gradient Descent
-        + formula = Then, one iteration of updating theta_j is given as:
+        + formula = Then, one iteration of updating theta_j is given as:  
         ![alt text](https://raw.github.com/quinnliu/MachineLearning/master/imagesForExplanation/equations/gradientDescentUpdateTheta_j.gif)
-        + problems with gradient descent is shown here:
+        + problems with gradient descent is shown here:  
         ![alt text](https://raw.github.com/quinnliu/MachineLearning/master/imagesForExplanation/GradientDescentWithMutlipleLocalMinimum.jpg "Gradient Descent Example")
 
     - Feature Scaling = technique for making gradient descent work better = make sure features are on a similar scale
