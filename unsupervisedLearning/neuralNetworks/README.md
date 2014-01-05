@@ -15,4 +15,4 @@ Neural Networks
 
   - Representing a Neuron
     + Here is a neuron in your brain:
-    ![alt text](https://raw.github.com/quinnliu/MachineLearning/master/imagesForExplanation/GradientDescentWithMutlipleLocalMinimum.jpg)
+    ![alt text](https://raw.github.com/quinnliu/MachineLearning/master/imagesForExplanation/LabeledNeuron.jpg)
