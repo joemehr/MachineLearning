@@ -34,7 +34,7 @@ file you can easily use multi-variable linear regression to predict something yo
         + formula = Then, one iteration of updating theta_j is given as:  
         ![alt text](https://raw.github.com/quinnliu/MachineLearning/master/imagesForExplanation/equations/gradientDescentUpdateTheta_j.gif)
         + problems with gradient descent is shown here:  
-        ![alt text](https://raw.github.com/quinnliu/MachineLearning/master/imagesForExplanation/GradientDescentWithMutlipleLocalMinimum.jpg "Gradient Descent Example")
+        ![alt text](https://raw.github.com/quinnliu/MachineLearning/master/imagesForExplanation/GradientDescentWithMutlipleLocalMinimum.jpg)
 
     - Feature Scaling = technique for making gradient descent work better = make sure features are on a similar scale
         + For example, if x_1 has a range of values from 0 - 2000 and x_2 has a range of values from 0 - 5
