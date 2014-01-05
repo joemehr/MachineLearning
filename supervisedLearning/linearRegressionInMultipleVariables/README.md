@@ -5,10 +5,6 @@ This specific folder contains an example of using multi-variable linear regressi
 future city populations. But understand that by just giving a different ```inputTrainingSet.txt``` 
 file you can easily use multi-variable linear regression to predict something you want!
 
-What each file or folder is for:
-
-+ run.m = the main program
-
 <h2>How To Use This Code</h2>
 1. install Octave or Matlab 
 
@@ -35,8 +31,10 @@ What each file or folder is for:
         + <b>We want to find which theta gives us the smallest cost J(theta)! By using gradient descent.</b>
         + Remember that GRADIENT DESCENT = algorithm that lets us find the theta vector that gives us the minimal cost!!!
     - Gradient Descent
-        + formula = Then, one iteration of updating theta_j is given as:
+        + formula = Then, one iteration of updating theta_j is given as:\n
         ![alt text](https://raw.github.com/quinnliu/MachineLearning/master/imagesForExplanation/equations/gradientDescentUpdateTheta_j.gif)
+        + problems with gradient descent is shown here:\n
+        ![alt text](https://raw.github.com/quinnliu/MachineLearning/master/imagesForExplanation/GradientDescentWithMutlipleLocalMinimum.jpg "Gradient Descent Example")
 
     - Feature Scaling = technique for making gradient descent work better = make sure features are on a similar scale
         + For example, if x_1 has a range of values from 0 - 2000 and x_2 has a range of values from 0 - 5
