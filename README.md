@@ -11,7 +11,7 @@ Definition of Machine Learning by Tom Mitchell
   2. Fork this repository and clone it locally! Navigate into specific folders (made them very specific) and look at the README.md file for that specific folder for which file(s) to run to see examples of what machine learning algorithms can do for you. Enjoy!
 
 <h2>What each file/folder in this repository is for:</h2>
-  - imagesForExplanation = contains images used in other folder's README.md files for explanation
+  - imagesForExplanation = contains images used in other folder's ```README.md``` files for explanation
 
   - supervisedLearning = teach the computer how to learn
     + [linearRegressionIn1Variable](./supervisedLearning/linearRegressionIn1Variable)
