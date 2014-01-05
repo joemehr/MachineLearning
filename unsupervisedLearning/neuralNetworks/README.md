@@ -14,5 +14,5 @@ Neural Networks
     features x 2500 other features giving us 3 million plus features which is WAY TOO MUCH.
 
   - Representing a Neuron
-    + Here is a neuron in your brain:
-    ![alt text](https://raw.github.com/quinnliu/MachineLearning/master/imagesForExplanation/LabeledNeuron.jpg)
+    + Here is a neuron in your brain: ![alt text]
+    (https://raw.github.com/quinnliu/MachineLearning/master/imagesForExplanation/LabeledNeuron.jpg)
