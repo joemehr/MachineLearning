@@ -24,3 +24,7 @@ Neural Networks
 
     + Now if we have a whole bunch of artificial neurons in a few layers we get a neural network like:  
     ![alt text](https://raw.github.com/quinnliu/MachineLearning/master/imagesForExplanation/NeuralNetwork.jpg)
+
+    + where (a_i)^(j) = activation of unit i in layer j and BigTheta^(j) = matrix of weights controlling function mapping from layer j to layer j + 1
+      - The dimension of BigTheta^(j) is s_j+1 x (s_j + 1) if a neural network has s_j units in layer j & s_j+1 units in layer j + 1.
+
