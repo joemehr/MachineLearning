@@ -20,6 +20,7 @@ Definition of Machine Learning by Tom Mitchell
     + [LinearAlgebraReview.md](./supervisedLearning/LinearAlgebraReview.md)
 
   - unsupervisedLearning = let the computer learn by itself
+    + [neuralNetworks](./unsupervisedLearning/neuralNetworks)
 
   - TODO: ReinforcementLearning
   - TODO: RecommenderSystems
