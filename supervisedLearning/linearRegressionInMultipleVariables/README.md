@@ -36,7 +36,7 @@ What each file or folder is for:
         + Remember that GRADIENT DESCENT = algorithm that lets us find the theta vector that gives us the minimal cost!!!
     - Gradient Descent
         + formula = Then, one iteration of updating theta_j is given as:
-        ![alt text]()
+        ![alt text](https://raw.github.com/quinnliu/MachineLearning/master/imagesForExplanation/equations/gradientDescentUpdateTheta_j.gif)
 
     - Feature Scaling = technique for making gradient descent work better = make sure features are on a similar scale
         + For example, if x_1 has a range of values from 0 - 2000 and x_2 has a range of values from 0 - 5
