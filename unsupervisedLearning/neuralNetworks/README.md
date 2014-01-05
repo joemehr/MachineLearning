@@ -13,15 +13,4 @@ Neural Networks
     2500 pixels. And then if trained linear or logistic regression with all pixel to pixel relationships then we would have 2500
     features x 2500 other features giving us 3 million plus features which is WAY TOO MUCH.
 
-  - Neurons and the Brain
-    One learning algorithm in the brain
-    - Support: 
-      + google "Roe et al., 1992"
-        - Summary: If you cut the wires from the ear to the auditory cortex and rewire the optic nerve to the
-        auditory cortex, then the auditory cortex learns to see. 
-      + google "Metin & Frost, 1989"
-        - Summary: If you make the wires from the optic nerve connect to the somatosensory cortex then the 
-        somatosensory cortex learns to see.
-    - Reasoning: If different parts of the neocortex (contains auditory cortex, somatosensory, and others..)
-    can be given new input and learn to process this new input, then we can guess there is a single learning 
-    algorithm in all parts of the neocortex. 
+  - Model Representation 
