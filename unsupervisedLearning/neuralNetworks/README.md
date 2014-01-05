@@ -20,7 +20,7 @@ Neural Networks
     + To represent this as an artificial neuron we have:  
     ![alt text](https://raw.github.com/quinnliu/MachineLearning/master/imagesForExplanation/ArtificialNeuronModel.jpg)
 
-    + where x = [x_0; x_1; x_2; x_3] (where x_0 always = 1) and theta = [theta_0; theta_1; theta_2; theta_3]
+    + where x = [x_0; x_1; x_2; x_3] where x_0 always = 1 and theta = [theta_0; theta_1; theta_2; theta_3]
 
-    + Now if we have a whole bunch of artificial neurons in a few layers we get a neural network like:
+    + Now if we have a whole bunch of artificial neurons in a few layers we get a neural network like:  
     ![alt text](https://raw.github.com/quinnliu/MachineLearning/master/imagesForExplanation/NeuralNetwork.jpg)
