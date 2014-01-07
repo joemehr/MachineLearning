@@ -30,5 +30,5 @@ Neural Networks
       - This is the set of equations that describes the above neural network configuration during forward propagation:
       ![alt text](https://raw.github.com/quinnliu/MachineLearning/master/imagesForExplanation/NeuralNetworkEquations.jpg)
 
-      - Now one or more of the neurons in a neural network can simulate a logical operations including AND, OR, XNOR. Here is an artificial neuron simulating the logical AND operation:  
+      - Now one or more of the neurons in a neural network can simulate a logical operations including AND, OR, NOT, XNOR. Here is an artificial neuron simulating the logical AND operation:  
       ![alt text](https://raw.github.com/quinnliu/MachineLearning/master/imagesForExplanation/ArtificialNeuronSimulateLogicalAND.jpg)
