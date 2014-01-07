@@ -22,11 +22,13 @@ Neural Networks
 
     + where x = [x_0; x_1; x_2; x_3] where x_0 always = 1 and theta = [theta_0; theta_1; theta_2; theta_3]
 
+    + Now one or more of these neurons can simulate a logical operations including AND, OR, XNOR. Here is an artificial neuron simulating the logical AND operation:  
+    ![alt text](https://raw.github.com/quinnliu/MachineLearning/master/imagesForExplanation/ArtificialNeuronSimulateLogicalAND.jpg)
+
     + Now if we have a whole bunch of artificial neurons in a few layers we get a neural network like:  
     ![alt text](https://raw.github.com/quinnliu/MachineLearning/master/imagesForExplanation/NeuralNetwork.jpg)
 
     + where (a_i)^(j) = activation of unit i in layer j and BigTheta^(j) = matrix of weights controlling function mapping from layer j to layer j + 1
       - The dimension of BigTheta^(j) is s_j+1 x (s_j + 1) if a neural network has s_j units in layer j & s_j+1 units in layer j + 1.
-      - This is the set of equations that describes the above neural network configuration:
+      - This is the set of equations that describes the above neural network configuration during forward propagation:
       ![alt text](https://raw.github.com/quinnliu/MachineLearning/master/imagesForExplanation/NeuralNetworkEquations.jpg)
-
