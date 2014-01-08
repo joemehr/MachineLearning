@@ -18,7 +18,7 @@ all_theta = zeros(numberOfLabels, numberOfPixelsInAImage + 1);
 % has been converted into a column vector 400 x 1.
 
 % Adds a column vector of 1's to the left most column of the X data matrix
-X = [ones(numberOfTrainingExamples, 1) X];
+X = [ones(numberOfTrainingExamples, 1) X]; % Now X = numberOfTrainingExamples x 401 matrix
 
 % y = 400 x 1 column vector where the value at each row index is the correct
 % label (of the handwritten digit) for corresponding row index in the the matrix X
@@ -31,9 +31,10 @@ initial_theta = zeros(numberOfPixelsInAImage + 1, 1);
 % efficient when we are dealing with large number of parameters.
 options = optimset('GradObj', 'on', 'MaxIter', 50);
  
-% Run fmincg to obtain the optimal thetat 
+% Run fmincg to obtain the optimal theta
 
 for currentLabel = 1:numberOfLabels
+	% all_theta = numberOfLabels x 401 (extra column of 1's)
 	all_theta(currentLabel, :) = fmincg( @(t)(costFunctionRegularized(t, X, (y == currentLabel), lambda)), initial_theta, options);
 end
 

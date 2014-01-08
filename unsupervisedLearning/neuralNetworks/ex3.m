@@ -41,6 +41,7 @@ fprintf('Program paused. Press enter to continue.\n');
 pause;
 
 %% ================ Predict for One-Vs-All ================
-pred = predictOneVsAll(all_theta, X);
+% predictions = m x 1 column vector
+predictions = predictOneVsAll(all_theta, X);
 
-fprintf('\nTraining Set Accuracy: %f\n', mean(double(pred == y)) * 100);
+fprintf('\nTraining Set Accuracy: %f\n', mean(double(predictions == y)) * 100);

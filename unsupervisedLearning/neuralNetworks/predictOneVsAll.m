@@ -8,35 +8,22 @@ function p = predictOneVsAll(all_theta, X)
 %  of values from 1..K (e.g., p = [1; 3; 1; 2] predicts classes 1, 3, 1, 2
 %  for 4 examples) 
 
-m = size(X, 1);
-num_labels = size(all_theta, 1);
+numberOfTrainingExamples = size(X, 1); % = m
+numberOfLabels = size(all_theta, 1); % = n
 
 % You need to return the following variables correctly 
-p = zeros(size(X, 1), 1);
+p = zeros(size(X, 1), 1); % p = m x 1 column vector
 
-% Add ones to the X data matrix
-X = [ones(m, 1) X];
+% Adds a column vector of 1's to the left most column of the X data matrix
+X = [ones(numberOfTrainingExamples, 1) X]; % Now X = m x (n + 1) matrix
 
-% ====================== YOUR CODE HERE ======================
-% Instructions: Complete the following code to make predictions using
-%               your learned logistic regression parameters (one-vs-all).
-%               You should set p to a vector of predictions (from 1 to
-%               num_labels).
-%
-% Hint: This code can be done all vectorized using the max function.
-%       In particular, the max function can also return the index of the 
-%       max element, for more information see 'help max'. If your examples 
-%       are in rows, then, you can use max(A, [], 2) to obtain the max 
-%       for each row.
-%       
+% X = m x 401
+% all_theta = n x 401 (extra column of 1's)
+% hypothesisForAllDigits = m x n matrix where element_ixj = the probability
+%   that the input image along row vector X(i, :) is digit value j (where j = 10 = digit '0')
+hypothesisForAllDigits = sigmoid(X * all_theta'); 
 
-
-
-
-
-
-
-% =========================================================================
-
+[M, p] = max(hypothesisForAllDigits, [], 2); % obtains the maximum number in all row vector 
+ 											 % in matrix hypothesisForAllDigits
 
 end
