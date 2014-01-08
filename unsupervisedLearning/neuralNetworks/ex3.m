@@ -4,8 +4,8 @@
 clear ; close all; clc
 
 %% Setup the parameters you will use for this part of the exercise
-input_layer_size  = 400;  % 20 pixel x 20 pixel input Images of Digits
-numberOfLabels = 10;          % 10 labels, from 1 to 10   
+inputLayerSize = 400;  % 20 pixel x 20 pixel input Images of Digits
+numberOfLabels = 10;      % 10 labels, from 1 to 10   
                           % (note that we have mapped "0" to label 10)
 
 %% =========== Loading and Visualizing Data =============
@@ -28,13 +28,9 @@ title('Example of 100 Randomly Selected Digits from Input Training Set');
 fprintf('Program paused. Press enter to continue.\n');
 pause;
 
-%% ============ Part 2: Vectorize Logistic Regression ============
-%  In this part of the exercise, you will reuse your logistic regression
-%  code from the last exercise. You task here is to make sure that your
-%  regularized logistic regression implementation is vectorized. After
-%  that, you will implement one-vs-all classification for the handwritten
-%  digit dataset.
-%
+%% ============ Vectorize Logistic Regression ============
+%  one-vs-all classification for the handwritten digit dataset
+%  using vectorized logistic regression with regularization
 
 fprintf('\nTraining One-vs-All Logistic Regression...\n')
 
@@ -44,8 +40,7 @@ lambda = 0.1;
 fprintf('Program paused. Press enter to continue.\n');
 pause;
 
-%% ================ Part 3: Predict for One-Vs-All ================
-%  After ...
+%% ================ Predict for One-Vs-All ================
 pred = predictOneVsAll(all_theta, X);
 
 fprintf('\nTraining Set Accuracy: %f\n', mean(double(pred == y)) * 100);
