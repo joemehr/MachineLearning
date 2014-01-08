@@ -15,12 +15,16 @@ n = size(X, 2);
 all_theta = zeros(num_labels, n + 1);
 
 % Add ones to the X data matrix
+% X = a #ofTrainingExamples x 400 matrix since each 
+% 20 x 20 pixel image has been converted into a column vector 400 x 1.
 X = [ones(m, 1) X];
 
-% ====================== YOUR CODE HERE ======================
-% Instructions: You should complete the following code to train num_labels
-%               logistic regression classifiers with regularization
-%               parameter lambda. 
+% y = 400 x 1 column vector where the value at each row index is the correct
+% label (of the handwritten digit) for corresponding row index in the the matrix X
+% NOTE: the digit '0' has been remapped to the label '10'
+
+% You should complete the following code to train num_labels
+% logistic regression classifiers with regularization parameter lambda. 
 %
 % Hint: theta(:) will return a column vector.
 %
@@ -47,20 +51,6 @@ X = [ones(m, 1) X];
 %     [theta] = ...
 %         fmincg (@(t)(lrCostFunction(t, X, (y == c), lambda)), ...
 %                 initial_theta, options);
-%
-
-
-
-
-
-
-
-
-
-
-
-
-% =========================================================================
 
 
 end
