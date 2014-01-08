@@ -24,21 +24,6 @@ X = [ones(numberOfTrainingExamples, 1) X];
 % label (of the handwritten digit) for corresponding row index in the the matrix X
 % NOTE: the digit '0' has been remapped to the label '10'
 
-
-
-% You should complete the following code to train numberOfLabels
-% logistic regression classifiers with regularization parameter lambda. 
-%
-% Hint: theta(:) will return a column vector.
-%
-% Hint: You can use y == c to obtain a vector of 1's and 0's that tell use 
-%       whether the ground truth is true/false for this class.
-%
-%       fmincg works similarly to fminunc, but is more efficient when we
-%       are dealing with large number of parameters.
-
-
-
 % Set Initial theta
 initial_theta = zeros(numberOfPixelsInAImage + 1, 1);
      
@@ -46,10 +31,10 @@ initial_theta = zeros(numberOfPixelsInAImage + 1, 1);
 % efficient when we are dealing with large number of parameters.
 options = optimset('GradObj', 'on', 'MaxIter', 50);
  
-% Run fmincg to obtain the optimal theta
-% This function will return theta and the cost 
-[theta] = ...
-    fmincg (@(t)(lrCostFunction(t, X, (y == c), lambda)), ...
-        initial_theta, options);
+% Run fmincg to obtain the optimal thetat 
+
+for currentLabel = 1:numberOfLabels
+	all_theta(currentLabel, :) = fmincg( @(t)(costFunctionRegularized(t, X, (y == currentLabel), lambda)), initial_theta, options);
+end
 
 end
