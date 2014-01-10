@@ -27,5 +27,8 @@ Definition of Machine Learning by Tom Mitchell
   - TODO: ReinforcementLearning
   - TODO: RecommenderSystems
 
+Most importantly, the majority of the material here was created while
+taking Andrew Ng's free online [Machine Learning class](https://www.coursera.org/course/ml).
+
 ===================================================================
 Feel free to e-mail me at quinnliu@vt.edu for any questions. Enjoy!
