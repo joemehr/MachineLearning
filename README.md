@@ -1,6 +1,9 @@
 Machine Learning
 ================
 
+The majority of the material here was created while taking Andrew Ng's free online 
+[Machine Learning class](https://www.coursera.org/course/ml) which I highly recommend!
+
 Definition of Machine Learning by Tom Mitchell
 
 *"A computer program is said to learn from experience E with respect to some task T and some performance measure P, if its performance on T, as measured by P, improves with experience E."*
@@ -26,9 +29,6 @@ Definition of Machine Learning by Tom Mitchell
 
   - TODO: ReinforcementLearning
   - TODO: RecommenderSystems
-
-Most importantly, the majority of the material here was created while
-taking Andrew Ng's free online [Machine Learning class](https://www.coursera.org/course/ml).
 
 ===================================================================
 Feel free to e-mail me at quinnliu@vt.edu for any questions. Enjoy!

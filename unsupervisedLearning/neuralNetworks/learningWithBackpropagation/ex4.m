@@ -1,33 +1,17 @@
-%% Machine Learning Online Class - Exercise 4 Neural Network Learning
-
-%  Instructions
-%  ------------
-% 
-%  This file contains code that helps you get started on the
-%  linear exercise. You will need to complete the following functions 
-%  in this exericse:
-%
-%     sigmoidGradient.m
-%     randInitializeWeights.m
-%     nnCostFunction.m
-%
-%  For this exercise, you will not need to change any code in this file,
-%  or any other files other than those mentioned above.
-%
+%% Neural Network Learning with Backpropagation
 
 %% Initialization
 clear ; close all; clc
 
 %% Setup the parameters you will use for this exercise
-input_layer_size  = 400;  % 20x20 Input Images of Digits
-hidden_layer_size = 25;   % 25 hidden units
-num_labels = 10;          % 10 labels, from 1 to 10   
-                          % (note that we have mapped "0" to label 10)
+inputLayerSize  = 400;  % 20x20 Input Images of Digits
+hiddenLayerSize = 25;   % 25 hidden units
+numberOfLabels = 10;    % 10 labels, from 1 to 10   
+                        % (note that we have mapped "0" to label 10)
 
 %% =========== Part 1: Loading and Visualizing Data =============
 %  We start the exercise by first loading and visualizing the dataset. 
 %  You will be working with a dataset that contains handwritten digits.
-%
 
 % Load Training Data
 fprintf('Loading and Visualizing Data ...\n')
@@ -40,6 +24,7 @@ sel = randperm(size(X, 1));
 sel = sel(1:100);
 
 displayData(X(sel, :));
+title('Example of 100 Randomly Selected Digits from Input Training Set');
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
@@ -54,7 +39,7 @@ fprintf('\nLoading Saved Neural Network Parameters ...\n')
 % Load the weights into variables Theta1 and Theta2
 load('ex4weights.mat');
 
-% Unroll parameters 
+% Unroll parameters by converting the matrix into a single long column vector
 nn_params = [Theta1(:) ; Theta2(:)];
 
 %% ================ Part 3: Compute Cost (Feedforward) ================
@@ -74,8 +59,8 @@ fprintf('\nFeedforward Using Neural Network ...\n')
 % Weight regularization parameter (we set this to 0 here).
 lambda = 0;
 
-J = nnCostFunction(nn_params, input_layer_size, hidden_layer_size, ...
-                   num_labels, X, y, lambda);
+J = nnCostFunction(nn_params, inputLayerSize, hiddenLayerSize, ...
+                   numberOfLabels, X, y, lambda);
 
 fprintf(['Cost at parameters (loaded from ex4weights): %f '...
          '\n(this value should be about 0.287629)\n'], J);
@@ -93,8 +78,8 @@ fprintf('\nChecking Cost Function (w/ Regularization) ... \n')
 % Weight regularization parameter (we set this to 1 here).
 lambda = 1;
 
-J = nnCostFunction(nn_params, input_layer_size, hidden_layer_size, ...
-                   num_labels, X, y, lambda);
+J = nnCostFunction(nn_params, inputLayerSize, hiddenLayerSize, ...
+                   numberOfLabels, X, y, lambda);
 
 fprintf(['Cost at parameters (loaded from ex4weights): %f '...
          '\n(this value should be about 0.383770)\n'], J);
@@ -128,8 +113,8 @@ pause;
 
 fprintf('\nInitializing Neural Network Parameters ...\n')
 
-initial_Theta1 = randInitializeWeights(input_layer_size, hidden_layer_size);
-initial_Theta2 = randInitializeWeights(hidden_layer_size, num_labels);
+initial_Theta1 = randInitializeWeights(inputLayerSize, hiddenLayerSize);
+initial_Theta2 = randInitializeWeights(hiddenLayerSize, numberOfLabels);
 
 % Unroll parameters
 initial_nn_params = [initial_Theta1(:) ; initial_Theta2(:)];
@@ -162,8 +147,8 @@ lambda = 3;
 checkNNGradients(lambda);
 
 % Also output the costFunction debugging values
-debug_J  = nnCostFunction(nn_params, input_layer_size, ...
-                          hidden_layer_size, num_labels, X, y, lambda);
+debug_J  = nnCostFunction(nn_params, inputLayerSize, ...
+                          hiddenLayerSize, numberOfLabels, X, y, lambda);
 
 fprintf(['\n\nCost at (fixed) debugging parameters (w/ lambda = 10): %f ' ...
          '\n(this value should be about 0.576051)\n\n'], debug_J);
@@ -190,20 +175,20 @@ lambda = 1;
 
 % Create "short hand" for the cost function to be minimized
 costFunction = @(p) nnCostFunction(p, ...
-                                   input_layer_size, ...
-                                   hidden_layer_size, ...
-                                   num_labels, X, y, lambda);
+                                   inputLayerSize, ...
+                                   hiddenLayerSize, ...
+                                   numberOfLabels, X, y, lambda);
 
 % Now, costFunction is a function that takes in only one argument (the
 % neural network parameters)
 [nn_params, cost] = fmincg(costFunction, initial_nn_params, options);
 
 % Obtain Theta1 and Theta2 back from nn_params
-Theta1 = reshape(nn_params(1:hidden_layer_size * (input_layer_size + 1)), ...
-                 hidden_layer_size, (input_layer_size + 1));
+Theta1 = reshape(nn_params(1:hiddenLayerSize * (inputLayerSize + 1)), ...
+                 hiddenLayerSize, (inputLayerSize + 1));
 
-Theta2 = reshape(nn_params((1 + (hidden_layer_size * (input_layer_size + 1))):end), ...
-                 num_labels, (hidden_layer_size + 1));
+Theta2 = reshape(nn_params((1 + (hiddenLayerSize * (inputLayerSize + 1))):end), ...
+                 numberOfLabels, (hiddenLayerSize + 1));
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
@@ -230,5 +215,3 @@ pause;
 pred = predict(Theta1, Theta2, X);
 
 fprintf('\nTraining Set Accuracy: %f\n', mean(double(pred == y)) * 100);
-
-
