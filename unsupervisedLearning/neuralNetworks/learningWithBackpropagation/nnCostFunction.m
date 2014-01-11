@@ -33,7 +33,7 @@ Theta2_grad = zeros(size(Theta2));
 % Part 1: Feedforward the neural network and return the cost in the
 %         variable J. After implementing Part 1, you can verify that your
 %         cost function computation is correct by verifying the cost
-%         computed in ex4.m
+%         computed in the main file's output to console.
 
 % X = 5000 x 400 matrix
 X = [ones(numberOfTrainingExamples, 1) X];
@@ -71,40 +71,38 @@ J = J + lambda / (2 * numberOfTrainingExamples) * reg;
 %               over the training examples if you are implementing it for the 
 %               first time.
 
-
-
 % Part 3: Implement regularization with the cost function and gradients.
 %
 %         Hint: You can implement this around the code for
 %               backpropagation. That is, you can compute the gradients for
 %               the regularization separately and then add them to Theta1_grad
 %               and Theta2_grad from Part 2.
-%
 
+G1 = zeros( size(Theta1) );
+G2 = zeros( size(Theta2) );
 
+for i = 1:numberOfTrainingExamples,
+	ra1 = X(i, :)';
 
+	rz2 = Theta1 * ra1;
+	ra2 = sigmoid(rz2);
+	ra2 = [1; ra2];
 
+	rz3 = Theta2 * ra2;
+	ra3 = sigmoid(rz3);
 
+	err3 = ra3 - ry(i, :)';
 
+	err2 = (Theta2' * err3)(2:end, 1) .* sigmoidGradient(rz2);
 
+	G1 = G1 + err2 * ra1';
+	G2 = G2 + err3 * ra2';
+end
 
-
-
-
-
-
-
-
-
-
-
-
-% -------------------------------------------------------------
-
-% =========================================================================
+Theta1_grad = G1 / numberOfTrainingExamples + lambda * [zeros(hidden_layer_size, 1) Theta1(:, 2:end)] / numberOfTrainingExamples;
+Theta2_grad = G2 / numberOfTrainingExamples + lambda * [zeros(num_labels, 1) Theta2(:, 2:end)] / numberOfTrainingExamples;
 
 % Unroll gradients
 grad = [Theta1_grad(:) ; Theta2_grad(:)];
-
 
 end
