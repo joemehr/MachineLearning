@@ -40,7 +40,7 @@ fprintf('\nLoading Saved Neural Network Parameters ...\n')
 load('ex4weights.mat');
 
 % Unroll parameters by converting the matrix into a single long column vector
-nn_params = [Theta1(:) ; Theta2(:)];
+neuralNetworkParameters = [Theta1(:) ; Theta2(:)];
 
 %% ================ Part 3: Compute Cost (Feedforward) ================
 %  To the neural network, you should first start by implementing the
@@ -59,7 +59,7 @@ fprintf('\nFeedforward Using Neural Network ...\n')
 % Weight regularization parameter (we set this to 0 here).
 lambda = 0;
 
-J = nnCostFunction(nn_params, inputLayerSize, hiddenLayerSize, ...
+J = nnCostFunction(neuralNetworkParameters, inputLayerSize, hiddenLayerSize, ...
                    numberOfLabels, X, y, lambda);
 
 fprintf(['Cost at parameters (loaded from ex4weights): %f '...
@@ -78,7 +78,7 @@ fprintf('\nChecking Cost Function (w/ Regularization) ... \n')
 % Weight regularization parameter (we set this to 1 here).
 lambda = 1;
 
-J = nnCostFunction(nn_params, inputLayerSize, hiddenLayerSize, ...
+J = nnCostFunction(neuralNetworkParameters, inputLayerSize, hiddenLayerSize, ...
                    numberOfLabels, X, y, lambda);
 
 fprintf(['Cost at parameters (loaded from ex4weights): %f '...
@@ -147,7 +147,7 @@ lambda = 3;
 checkNNGradients(lambda);
 
 % Also output the costFunction debugging values
-debug_J  = nnCostFunction(nn_params, inputLayerSize, ...
+debug_J  = nnCostFunction(neuralNetworkParameters, inputLayerSize, ...
                           hiddenLayerSize, numberOfLabels, X, y, lambda);
 
 fprintf(['\n\nCost at (fixed) debugging parameters (w/ lambda = 10): %f ' ...
@@ -181,13 +181,13 @@ costFunction = @(p) nnCostFunction(p, ...
 
 % Now, costFunction is a function that takes in only one argument (the
 % neural network parameters)
-[nn_params, cost] = fmincg(costFunction, initial_nn_params, options);
+[neuralNetworkParameters, cost] = fmincg(costFunction, initial_nn_params, options);
 
-% Obtain Theta1 and Theta2 back from nn_params
-Theta1 = reshape(nn_params(1:hiddenLayerSize * (inputLayerSize + 1)), ...
+% Obtain Theta1 and Theta2 back from neuralNetworkParameters
+Theta1 = reshape(neuralNetworkParameters(1:hiddenLayerSize * (inputLayerSize + 1)), ...
                  hiddenLayerSize, (inputLayerSize + 1));
 
-Theta2 = reshape(nn_params((1 + (hiddenLayerSize * (inputLayerSize + 1))):end), ...
+Theta2 = reshape(neuralNetworkParameters((1 + (hiddenLayerSize * (inputLayerSize + 1))):end), ...
                  numberOfLabels, (hiddenLayerSize + 1));
 
 fprintf('Program paused. Press enter to continue.\n');
