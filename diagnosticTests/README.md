@@ -16,5 +16,12 @@ how to improve it's performance.
   + Because we choose the best hypothesis for the cross validation set we will expect to see that J_crossValidation(theta) to be less than J_test(theta).
 
 - If your learning algorithm isn't working as well as you would like it is most likely that you are underfitting the data (also
-  known as variance) or overfitting the data (also known as bias).  
+  known as bias) or overfitting the data (also known as variance).  
   ![alt text](https://raw.github.com/quinnliu/MachineLearning/master/imagesForExplanation/UnderFitAndOverFit.jpg)
+
+  + If Bias/Underfit problem
+    - J_training(theta) will be high
+    - J_crossValidation(theta) ~= J_training(theta)
+  + If Variance/Overfit problem
+    - J_training(theta) will be low
+    - J_crossValidation much bigger than J_training(theta)
