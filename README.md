@@ -30,7 +30,6 @@ T and some performance measure P, if its performance on T, as measured by P, imp
       - [digitRecognition](./unsupervisedLearning/neuralNetworks/digitRecognition)
       - [learningWithBackpropagation](./unsupervisedLearning/neuralNetworks/learningWithBackpropagation)
 
-  - TODO: ReinforcementLearning
   - TODO: RecommenderSystems
   - README.md = the file you are reading right now
 
